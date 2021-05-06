@@ -73,6 +73,9 @@
         if(mins < 10){
             mins = "0" + mins;//like 2:05 not 2:5
         }
+        if(hours < 10){
+            hours = "0" + hours;//like 02:05 not 2:5
+        }
         // console.log(month + "/" + date);
 
         return `${month} ${date} | ${hours} : ${mins}${period}`;
