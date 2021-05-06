@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body>
+    {{!-- nav bar --}}
+    {{>navbar}}
+
+<!-- main header -->
+
+<div class="container-fluid main_header">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="row">
+        <!-- left -->
+        <div class="col-md-6 col-12 main_header_left">
+            <p>Welcome To </p>
+            <h1>Get updated <span class="text_color">Weather</span> info any time any where</h1>
+            <a href="/Weather"></a>
+            <button><div class='container'>
+              <ul>
+                  <a class='animated-arrow' href='#'>
+                    <span class='the-arrow -left'>
+                      <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                      <span class='text'>
+                        Explore More
+                      </span>
+                      <span class='the-arrow -right'>
+                        <span class='shaft'></span>
+                      </span>
+                    </span>
+                  </a>
+              </ul>
+            </div></button>            
+        </div>
+        <!-- right -->
+        <div class="col-md-6 col-12 main_header_right">
+          <!-- Carousel -->
+          <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+          
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/undraw_Gardening_eaf3.svg" style="width: 90%;" alt="" class="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="img/undraw_autumn_2_ygk5 (1).svg" alt="" class="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="img/undraw_winter_road_mcqj.svg" style="width: 150%;" alt="" class="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="img/undraw_sunlight_tn7t.svg" style="width: 110%;" alt="" class="img-fluid">
+              </div>
+              <div class="carousel-item">
+                <img src="img/undraw_Beach_rvmg.svg" style="width: 110%;" alt="" class="img-fluid">
+              </div>
+            </div>
+          
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+  {{>footer}}
+
+  <script src="js/main.js"></script>
+  
+
+</body>
+</html>

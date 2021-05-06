@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body>
+    {{!-- nav bar --}}
+    {{>navbar}}
+
+<!-- main header -->
+
+<div class="container-fluid main_header">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="main_content">
+          <form class="temp_form">
+              <input type="text" id="cityname" placeholder="enter ur city name" autocomplete="off">
+              <input type="submit" value="search" id="submitbtn">
+          </form>
+      </div>
+      <div class="tempInformation">
+          <div class="top_layer">
+              <p id="day">day</p>
+              <p id="today_data">13 Oct</p>
+          </div>
+          <div class="main_layer">
+              <p id="city_name">get o/p here</p>
+              <div class="middle_layer data_hide">
+                  <p id="temp"><span id="temp_real_val">0</span><sup>0</sup>C</p>
+                  <p id="temp_status"><i class="fa fa-cloud"></i></p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+  {{>footer}}
+
+  <script src="js/main.js"></script>
+  <script>
+    const today_data = document.getElementById('today_data');
+    const getCurrentTime = () => {
+
+        var months = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sept",
+            "Oct",
+            "Nov",
+            "Dec"
+        ];
+
+        var now = new Date();
+        // var month = months[now.getMonth() + 1];//started with index 0 so we add 1..
+        var month = months[now.getMonth()];
+        var date = now.getDate();
+        // var year = now.getFullYear();
+        let hours = now.getHours();
+        let mins = now.getMinutes();
+        let period = "AM";
+        if (hours > 11) {
+            period = "PM";
+            if(hours > 12) hours -= 12;
+        }
+        if(mins < 10){
+            mins = "0" + mins;//like 2:05 not 2:5
+        }
+        // console.log(month + "/" + date);
+
+        return `${month} ${date} | ${hours} : ${mins}${period}`;
+    };
+
+    today_data.innerHTML = getCurrentTime();
+    //getCurrentTime();
+  </script>
+
+</body>
+</html>

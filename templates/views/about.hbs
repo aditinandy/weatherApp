@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body>
+    <!-- nav bar -->
+    {{>navbar}}
+
+<!-- main header -->
+
+<div class="container-fluid main_header">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="row">
+        <!-- left -->
+        <div class="col-md-6 col-12 main_header_left">
+            <p>Welcome To </p>
+            <h1> I am a <span class="text_color">Node js Developer</span>...</h1>
+            <a href="/Weather"></a>
+            <button><div class='container'>
+              <ul>
+                  <a class='animated-arrow' href='#'>
+                    <span class='the-arrow -left'>
+                      <span class='shaft'></span>
+                    </span>
+                    <span class='main'>
+                      <span class='text'>
+                        About me..
+                      </span>
+                      <span class='the-arrow -right'>
+                        <span class='shaft'></span>
+                      </span>
+                    </span>
+                  </a>
+              </ul>
+            </div></button>            
+        </div>
+        <!-- right -->
+        <div class="col-md-6 col-12 main_header_right">
+          <figure>
+            <img src="img/undraw_nature_on_screen_xkli.svg" alt="" class="img-fluid" title="******">
+          </figure>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+{{>footer}}
+
+  <script src="js/main.js"></script>
+  
+
+</body>
+</html>

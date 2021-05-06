@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+</head>
+<body>
+    <!-- nav bar -->
+    {{>navbar}}
+
+<!-- main header -->
+
+<div class="container-fluid main_header">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="row">
+        <!-- left -->
+        
+        <!-- right -->
+        <div class="col-md-12 col-12 main_header_left align-items-center ">
+          <figure class="errimg">
+            <img src="img/undraw_warning_cyit.png" alt="" class="img-fluid" title="******">
+          </figure>
+          <p>Wlcome to</p>
+          <h1>{{errorMsg}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+{{>footer}}
+
+  <script src="js/main.js"></script>
+  
+
+</body>
+</html>
